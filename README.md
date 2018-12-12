@@ -1,5 +1,5 @@
 # WeatherApp
- WeatherApp is my first finished project. I have done many app's, but none have been completely done. It is time to fix it.
+ WeatherApp will be my first finished project. I have done many app's, but none have been completely done. It is time to fix it.
  
  
- ### progress: 7%
+ ### Progress: 7%
