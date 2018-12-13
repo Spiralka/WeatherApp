@@ -10,9 +10,14 @@ import Foundation
 
 class NetworkManager {
     
+    enum Result<Value> {
+        case success(Value)
+        case failure(Error)
+    }
+    
     let appId = "ca9db572fae974e04fc67268c81830a9"
     
-    func getWeatherData(parametrs: [String]) {
+    func getWeatherData(parametrs: [String], completion: ((Result<WeatherStruct>) -> Void)?) -> () {
         
         var urlComponents = URLComponents()
         urlComponents.scheme = "http"
@@ -20,8 +25,9 @@ class NetworkManager {
         urlComponents.path = "/data/2.5/weather"
         let queryItemLan = URLQueryItem(name: "lat", value: parametrs.first)
         let queryItemLon = URLQueryItem(name: "lon", value: parametrs.last)
+        let queryItemUnits = URLQueryItem(name: "units", value: "metric")
         let queryItemToken = URLQueryItem(name: "appid", value: appId)
-        urlComponents.queryItems = [queryItemLan, queryItemLon, queryItemToken]
+        urlComponents.queryItems = [queryItemLan, queryItemLon, queryItemUnits, queryItemToken]
         guard let url = urlComponents.url else { return }
         
         var request = URLRequest(url: url)
@@ -33,15 +39,16 @@ class NetworkManager {
             guard let jsonData = responseData else { return }
             print(jsonData)
             let decoder = JSONDecoder()
-            
             do {
-                let decodedData = try decoder.decode(WeatherStruct.self, from: jsonData)
-                print(decodedData.main.temp)
+                 let decodedData = try decoder.decode(WeatherStruct.self, from: jsonData)
+                completion?(.success(decodedData))
             } catch {
+                completion?(.failure(error))
                 print(error.localizedDescription)
             }
         }
         task.resume()
     }
+    
 }
 

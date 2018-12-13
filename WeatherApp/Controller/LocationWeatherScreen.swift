@@ -13,8 +13,10 @@ class LocationWeatherScreen: UIViewController {
     
     let locationManager = CLLocationManager()
     let networkManager = NetworkManager()
-    let weatherModel = WeatherDataModel()
+    var weatherModel: WeatherStruct?
     
+    @IBOutlet weak var tempLabel: UILabel!
+    @IBOutlet weak var cityLabel: UILabel!
     
     
     override func viewDidLoad() {
@@ -27,6 +29,12 @@ class LocationWeatherScreen: UIViewController {
         locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters
         locationManager.requestWhenInUseAuthorization()
         locationManager.startUpdatingLocation()
+        
+    }
+    
+    func updateInfo(info: WeatherStruct) {
+        tempLabel.text = info.main.temp.description + "℃"
+        cityLabel.text = info.name
     }
     
 }
@@ -43,11 +51,22 @@ extension LocationWeatherScreen: CLLocationManagerDelegate {
             locationManager.stopUpdatingLocation()
             locationManager.delegate = nil
             print("long = \(location.coordinate.longitude)", "lat = \(location.coordinate.latitude)")
-            let latitude = String(location.coordinate.latitude)
+            let latitude = location.coordinate.latitude.description
             let longitude = location.coordinate.longitude.description
             let params = [latitude, longitude]
             
-            networkManager.getWeatherData(parametrs: params)
+            networkManager.getWeatherData(parametrs: params) { (result) in
+                switch result {
+                case .success(let weatherModel):
+                    self.weatherModel = weatherModel
+                    DispatchQueue.main.async {
+                    self.updateInfo(info: weatherModel)
+                    }
+                    print(weatherModel)
+                case .failure(let error):
+                    print("Error \(error.localizedDescription)")
+                }
+            }
         }
     }
     

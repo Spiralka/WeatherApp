@@ -18,9 +18,9 @@ class WeatherDataModel {
 
 struct WeatherStruct: Codable {
     var name: String
-    var main: InsideItems
+    var main: TemparatureData
 }
 
-struct InsideItems: Codable {
+struct TemparatureData: Codable {
     var temp: Float
 }

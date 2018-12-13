@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		CF49C48721C152C4007E6B7B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF49C48621C152C4007E6B7B /* AppDelegate.swift */; };
 		CF49C48921C152C4007E6B7B /* LocationWeatherScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF49C48821C152C4007E6B7B /* LocationWeatherScreen.swift */; };
-		CF49C48C21C152C4007E6B7B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF49C48A21C152C4007E6B7B /* Main.storyboard */; };
+		CF49C48C21C152C4007E6B7B /* LocationWeatherScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF49C48A21C152C4007E6B7B /* LocationWeatherScreen.storyboard */; };
 		CF49C48E21C152C8007E6B7B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF49C48D21C152C8007E6B7B /* Assets.xcassets */; };
 		CF49C49121C152C8007E6B7B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF49C48F21C152C8007E6B7B /* LaunchScreen.storyboard */; };
 		CF5364D021C1607800C5833D /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5364CF21C1607800C5833D /* NetworkManager.swift */; };
@@ -20,7 +20,7 @@
 		CF49C48321C152C4007E6B7B /* WeatherApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF49C48621C152C4007E6B7B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CF49C48821C152C4007E6B7B /* LocationWeatherScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationWeatherScreen.swift; sourceTree = "<group>"; };
-		CF49C48B21C152C4007E6B7B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CF49C48B21C152C4007E6B7B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LocationWeatherScreen.storyboard; sourceTree = "<group>"; };
 		CF49C48D21C152C8007E6B7B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CF49C49021C152C8007E6B7B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CF49C49221C152C8007E6B7B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -89,7 +89,7 @@
 		CF99000721C15A4D00216C50 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				CF49C48A21C152C4007E6B7B /* Main.storyboard */,
+				CF49C48A21C152C4007E6B7B /* LocationWeatherScreen.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -154,7 +154,7 @@
 			files = (
 				CF49C49121C152C8007E6B7B /* LaunchScreen.storyboard in Resources */,
 				CF49C48E21C152C8007E6B7B /* Assets.xcassets in Resources */,
-				CF49C48C21C152C4007E6B7B /* Main.storyboard in Resources */,
+				CF49C48C21C152C4007E6B7B /* LocationWeatherScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -175,12 +175,12 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		CF49C48A21C152C4007E6B7B /* Main.storyboard */ = {
+		CF49C48A21C152C4007E6B7B /* LocationWeatherScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				CF49C48B21C152C4007E6B7B /* Base */,
 			);
-			name = Main.storyboard;
+			name = LocationWeatherScreen.storyboard;
 			sourceTree = "<group>";
 		};
 		CF49C48F21C152C8007E6B7B /* LaunchScreen.storyboard */ = {
