@@ -14,9 +14,11 @@ class LocationWeatherScreen: UIViewController {
     let locationManager = CLLocationManager()
     let networkManager = NetworkManager()
     var weatherModel: WeatherStruct?
+    var weatherDataManager = WeatherDataModel()
     
     @IBOutlet weak var tempLabel: UILabel!
     @IBOutlet weak var cityLabel: UILabel!
+    @IBOutlet weak var conditionIcon: UIImageView!
     
     
     override func viewDidLoad() {
@@ -32,10 +34,13 @@ class LocationWeatherScreen: UIViewController {
         
     }
     
-    func updateInfo(info: WeatherStruct) {
-        tempLabel.text = info.main.temp.description + "℃"
+    func updateWeatherInfo(info: WeatherStruct) {
+        tempLabel.text = Int(info.main.temp).description + "℃"
         cityLabel.text = info.name
+        conditionIcon.image = UIImage(named: weatherDataManager.updateWeatherIcon(condition: info.weather[0].id))
+        
     }
+    
     
 }
 
@@ -60,7 +65,7 @@ extension LocationWeatherScreen: CLLocationManagerDelegate {
                 case .success(let weatherModel):
                     self.weatherModel = weatherModel
                     DispatchQueue.main.async {
-                    self.updateInfo(info: weatherModel)
+                    self.updateWeatherInfo(info: weatherModel)
                     }
                     print(weatherModel)
                 case .failure(let error):

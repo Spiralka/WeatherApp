@@ -30,12 +30,19 @@
                                 <color key="textColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="d5f-Nx-WOL">
+                                <rect key="frame" x="16" y="108" width="343" height="249"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="d5f-Nx-WOL" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="64" id="3ji-gm-HMJ"/>
                             <constraint firstItem="6Xu-P2-K2i" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="BxB-Ah-kq4"/>
+                            <constraint firstItem="d5f-Nx-WOL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="EtV-uu-oUc"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="XS3-al-yvV" secondAttribute="trailing" symbolic="YES" id="NAy-ls-cXF"/>
                             <constraint firstItem="XS3-al-yvV" firstAttribute="leading" secondItem="6Xu-P2-K2i" secondAttribute="leading" id="a8y-jd-YVa"/>
+                            <constraint firstItem="6Xu-P2-K2i" firstAttribute="top" secondItem="d5f-Nx-WOL" secondAttribute="bottom" constant="8" id="eh0-vb-3Jj"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="d5f-Nx-WOL" secondAttribute="trailing" constant="16" id="guh-dw-Qko"/>
                             <constraint firstItem="6Xu-P2-K2i" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="olz-5F-xwF"/>
                             <constraint firstItem="XS3-al-yvV" firstAttribute="top" secondItem="6Xu-P2-K2i" secondAttribute="bottom" id="ymr-xU-xw5"/>
                         </constraints>
@@ -43,6 +50,7 @@
                     </view>
                     <connections>
                         <outlet property="cityLabel" destination="XS3-al-yvV" id="57A-b2-Wbk"/>
+                        <outlet property="conditionIcon" destination="d5f-Nx-WOL" id="U2I-5P-aPz"/>
                         <outlet property="tempLabel" destination="6Xu-P2-K2i" id="EGr-2w-SBM"/>
                     </connections>
                 </viewController>
