@@ -2,15 +2,17 @@
   "images" : [
     {
       "idiom" : "universal",
+      "filename" : "tstorm1.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "tstorm1.png",
+      "filename" : "tstorm1@2x.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
+      "filename" : "tstorm1@3x.png",
       "scale" : "3x"
     }
   ],

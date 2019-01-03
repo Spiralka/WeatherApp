@@ -31,18 +31,20 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="d5f-Nx-WOL">
-                                <rect key="frame" x="16" y="108" width="343" height="249"/>
+                                <rect key="frame" x="195" y="239" width="120" height="120"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="9N4-tO-FCI"/>
+                                    <constraint firstAttribute="height" constant="120" id="zxx-7u-Smd"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="d5f-Nx-WOL" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="64" id="3ji-gm-HMJ"/>
+                            <constraint firstItem="6Xu-P2-K2i" firstAttribute="top" secondItem="d5f-Nx-WOL" secondAttribute="bottom" constant="6" id="Aju-Uo-NQT"/>
                             <constraint firstItem="6Xu-P2-K2i" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="BxB-Ah-kq4"/>
-                            <constraint firstItem="d5f-Nx-WOL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="EtV-uu-oUc"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="XS3-al-yvV" secondAttribute="trailing" symbolic="YES" id="NAy-ls-cXF"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="d5f-Nx-WOL" secondAttribute="trailing" constant="60" id="Wll-XO-2n3"/>
                             <constraint firstItem="XS3-al-yvV" firstAttribute="leading" secondItem="6Xu-P2-K2i" secondAttribute="leading" id="a8y-jd-YVa"/>
-                            <constraint firstItem="6Xu-P2-K2i" firstAttribute="top" secondItem="d5f-Nx-WOL" secondAttribute="bottom" constant="8" id="eh0-vb-3Jj"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="d5f-Nx-WOL" secondAttribute="trailing" constant="16" id="guh-dw-Qko"/>
                             <constraint firstItem="6Xu-P2-K2i" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="olz-5F-xwF"/>
                             <constraint firstItem="XS3-al-yvV" firstAttribute="top" secondItem="6Xu-P2-K2i" secondAttribute="bottom" id="ymr-xU-xw5"/>
                         </constraints>

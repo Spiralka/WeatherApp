@@ -21,7 +21,7 @@ class WeatherDataModel {
             return "tstorm1"
             
         case 301...500 :
-            return "light_rain"
+            return "shower3"
             
         case 501...600 :
             return "shower3"
@@ -45,13 +45,13 @@ class WeatherDataModel {
             return "tstorm3"
             
         case 903 :
-            return "snow5"
+            return "snow4"
             
         case 904 :
             return "sunny"
             
         default :
-            return "dunno"
+            return "Cloud-Refresh"
         }
     }
 

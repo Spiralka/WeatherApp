@@ -14,7 +14,7 @@ class LocationWeatherScreen: UIViewController {
     let locationManager = CLLocationManager()
     let networkManager = NetworkManager()
     var weatherModel: WeatherStruct?
-    var weatherDataManager = WeatherDataModel()
+    var weatherManager = WeatherDataModel()
     
     @IBOutlet weak var tempLabel: UILabel!
     @IBOutlet weak var cityLabel: UILabel!
@@ -23,7 +23,14 @@ class LocationWeatherScreen: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupViews()
         setupLocationManager()
+    }
+    
+    func setupViews() {
+        conditionIcon.image = UIImage(named: "Cloud-Refresh")
+        tempLabel.text = "--℃"
+        cityLabel.text = "Updating..."
     }
     
     func setupLocationManager() {
@@ -37,13 +44,12 @@ class LocationWeatherScreen: UIViewController {
     func updateWeatherInfo(info: WeatherStruct) {
         tempLabel.text = Int(info.main.temp).description + "℃"
         cityLabel.text = info.name
-        conditionIcon.image = UIImage(named: weatherDataManager.updateWeatherIcon(condition: info.weather[0].id))
+        conditionIcon.image = UIImage(named: weatherManager.updateWeatherIcon(condition: info.weather[0].id))
         
     }
     
     
 }
-
 
 
 //MARK: CoreLocation delegate methods
