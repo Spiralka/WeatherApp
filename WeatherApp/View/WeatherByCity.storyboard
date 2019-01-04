@@ -66,6 +66,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Vg6-Cf-O8G"/>
                     </view>
+                    <connections>
+                        <outlet property="cityTextField" destination="IeZ-He-QfI" id="K5O-Ij-rs7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0jL-2d-rBR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

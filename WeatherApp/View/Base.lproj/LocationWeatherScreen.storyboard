@@ -48,9 +48,16 @@
                                     <action selector="nextScreenTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uIM-NN-h4l"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Something went wrong..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4xa-Xj-aef">
+                                <rect key="frame" x="107.66666666666669" y="484" width="226" height="27"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="22"/>
+                                <color key="textColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="4xa-Xj-aef" firstAttribute="top" secondItem="XS3-al-yvV" secondAttribute="bottom" constant="8" id="6O7-Qy-jmZ"/>
                             <constraint firstItem="6Xu-P2-K2i" firstAttribute="top" secondItem="d5f-Nx-WOL" secondAttribute="bottom" constant="6" id="Aju-Uo-NQT"/>
                             <constraint firstItem="6Xu-P2-K2i" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="BxB-Ah-kq4"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="XS3-al-yvV" secondAttribute="trailing" symbolic="YES" id="NAy-ls-cXF"/>
@@ -58,6 +65,7 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="d5f-Nx-WOL" secondAttribute="trailing" constant="60" id="Wll-XO-2n3"/>
                             <constraint firstItem="XS3-al-yvV" firstAttribute="leading" secondItem="6Xu-P2-K2i" secondAttribute="leading" id="a8y-jd-YVa"/>
                             <constraint firstItem="hdk-70-y86" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="h9e-3c-e93"/>
+                            <constraint firstItem="4xa-Xj-aef" firstAttribute="leading" secondItem="XS3-al-yvV" secondAttribute="leading" id="j9Z-Nl-jiG"/>
                             <constraint firstItem="6Xu-P2-K2i" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="olz-5F-xwF"/>
                             <constraint firstItem="XS3-al-yvV" firstAttribute="top" secondItem="6Xu-P2-K2i" secondAttribute="bottom" id="ymr-xU-xw5"/>
                         </constraints>
@@ -67,6 +75,7 @@
                         <outlet property="cityLabel" destination="XS3-al-yvV" id="57A-b2-Wbk"/>
                         <outlet property="conditionIcon" destination="d5f-Nx-WOL" id="U2I-5P-aPz"/>
                         <outlet property="tempLabel" destination="6Xu-P2-K2i" id="EGr-2w-SBM"/>
+                        <outlet property="wrongLabel" destination="4xa-Xj-aef" id="wq5-oJ-PSV"/>
                         <segue destination="I8W-G6-0VR" kind="show" identifier="goToWeatherByCity" id="Knk-EN-0Ty"/>
                     </connections>
                 </viewController>

@@ -11,6 +11,9 @@ import UIKit
 
 class WeatherByCityController: UIViewController {
     
+    var delegate: CanReceive?
+    
+    @IBOutlet weak var cityTextField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,6 +24,7 @@ class WeatherByCityController: UIViewController {
     }
     
     @IBAction func updateWeatherByCityTapped(_ sender: UIButton) {
+        delegate?.receivedCityName(city: cityTextField.text ?? "")
         dismiss(animated: true, completion: nil)
     }
 }

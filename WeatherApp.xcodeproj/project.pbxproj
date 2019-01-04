@@ -16,6 +16,8 @@
 		CF99000521C1596900216C50 /* WeatherDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF99000421C1596900216C50 /* WeatherDataModel.swift */; };
 		CFC4DD5A21DFD52B00B011B6 /* WeatherByCity.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFC4DD5921DFD52B00B011B6 /* WeatherByCity.storyboard */; };
 		CFC4DD5C21DFD53D00B011B6 /* WeatherByCityController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC4DD5B21DFD53D00B011B6 /* WeatherByCityController.swift */; };
+		CFC4DD6021DFDE6300B011B6 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC4DD5F21DFDE6300B011B6 /* Protocols.swift */; };
+		CFC4DD6221DFE6FB00B011B6 /* Animator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC4DD6121DFE6FB00B011B6 /* Animator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		CF99000421C1596900216C50 /* WeatherDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDataModel.swift; sourceTree = "<group>"; };
 		CFC4DD5921DFD52B00B011B6 /* WeatherByCity.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WeatherByCity.storyboard; sourceTree = "<group>"; };
 		CFC4DD5B21DFD53D00B011B6 /* WeatherByCityController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherByCityController.swift; sourceTree = "<group>"; };
+		CFC4DD5F21DFDE6300B011B6 /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
+		CFC4DD6121DFE6FB00B011B6 /* Animator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,9 +71,8 @@
 				CF99000721C15A4D00216C50 /* View */,
 				CF5364CE21C1600700C5833D /* Controller */,
 				CF49C48D21C152C8007E6B7B /* Assets.xcassets */,
-				CF49C48F21C152C8007E6B7B /* LaunchScreen.storyboard */,
-				CF49C49221C152C8007E6B7B /* Info.plist */,
-				CF5364CF21C1607800C5833D /* NetworkManager.swift */,
+				CFC4DD6421DFE95500B011B6 /* Network */,
+				CFC4DD6321DFE94900B011B6 /* SupportingFiles */,
 			);
 			path = WeatherApp;
 			sourceTree = "<group>";
@@ -94,10 +97,29 @@
 		CF99000721C15A4D00216C50 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				CF49C48F21C152C8007E6B7B /* LaunchScreen.storyboard */,
 				CF49C48A21C152C4007E6B7B /* LocationWeatherScreen.storyboard */,
 				CFC4DD5921DFD52B00B011B6 /* WeatherByCity.storyboard */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		CFC4DD6321DFE94900B011B6 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				CFC4DD5F21DFDE6300B011B6 /* Protocols.swift */,
+				CFC4DD6121DFE6FB00B011B6 /* Animator.swift */,
+				CF49C49221C152C8007E6B7B /* Info.plist */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		CFC4DD6421DFE95500B011B6 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				CF5364CF21C1607800C5833D /* NetworkManager.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -175,7 +197,9 @@
 				CFC4DD5C21DFD53D00B011B6 /* WeatherByCityController.swift in Sources */,
 				CF5364D021C1607800C5833D /* NetworkManager.swift in Sources */,
 				CF49C48921C152C4007E6B7B /* LocationWeatherScreen.swift in Sources */,
+				CFC4DD6021DFDE6300B011B6 /* Protocols.swift in Sources */,
 				CF49C48721C152C4007E6B7B /* AppDelegate.swift in Sources */,
+				CFC4DD6221DFE6FB00B011B6 /* Animator.swift in Sources */,
 				CF99000521C1596900216C50 /* WeatherDataModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -324,7 +348,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 47M342TKQP;
-				INFOPLIST_FILE = WeatherApp/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/WeatherApp/SupportingFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -342,7 +366,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 47M342TKQP;
-				INFOPLIST_FILE = WeatherApp/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/WeatherApp/SupportingFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

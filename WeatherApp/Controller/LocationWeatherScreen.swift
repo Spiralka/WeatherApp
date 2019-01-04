@@ -9,13 +9,17 @@
 import UIKit
 import CoreLocation
 
-class LocationWeatherScreen: UIViewController {
+class LocationWeatherScreen: UIViewController, CanReceive {
+    
+    
     
     let locationManager = CLLocationManager()
     let networkManager = NetworkManager()
     var weatherModel: WeatherStruct?
     var weatherManager = WeatherDataModel()
+    let animationsManager = SimpleAnimator()
     
+    @IBOutlet weak var wrongLabel: UILabel!
     @IBOutlet weak var tempLabel: UILabel!
     @IBOutlet weak var cityLabel: UILabel!
     @IBOutlet weak var conditionIcon: UIImageView!
@@ -31,9 +35,37 @@ class LocationWeatherScreen: UIViewController {
         performSegue(withIdentifier: "goToWeatherByCity", sender: self)
     }
     
+    func receivedCityName(city: String) {
+        print(city)
+        networkManager.getWeatherDataByCity(city: city) { (result) in
+            switch result {
+            case .success(let weatherModel):
+                self.weatherModel = weatherModel
+                DispatchQueue.main.async {
+                    self.updateWeatherInfo(info: weatherModel)
+                }
+                print(weatherModel)
+            case .failure(let error):
+                DispatchQueue.main.async {
+                    self.animationsManager.fadeInAndOutAnimation(view: self.wrongLabel)
+                    
+//                    self.wrongLabel.isHidden = false
+                }
+                print("Error \(error.localizedDescription)")
+            }
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "goToWeatherByCity" {
+            guard let destinationVc = segue.destination as? WeatherByCityController else { return }
+            destinationVc.delegate = self
+        }
+    }
     
     
     func setupViews() {
+        wrongLabel.layer.opacity = 0
         conditionIcon.image = UIImage(named: "Cloud-Refresh")
         tempLabel.text = "--℃"
         cityLabel.text = "Updating..."
@@ -53,6 +85,8 @@ class LocationWeatherScreen: UIViewController {
         conditionIcon.image = UIImage(named: weatherManager.updateWeatherIcon(condition: info.weather[0].id))
         
     }
+    
+    
     
     
 }
