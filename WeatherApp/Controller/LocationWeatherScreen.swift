@@ -27,6 +27,12 @@ class LocationWeatherScreen: UIViewController {
         setupLocationManager()
     }
     
+    @IBAction func nextScreenTapped(_ sender: UIButton) {
+        performSegue(withIdentifier: "goToWeatherByCity", sender: self)
+    }
+    
+    
+    
     func setupViews() {
         conditionIcon.image = UIImage(named: "Cloud-Refresh")
         tempLabel.text = "--℃"
@@ -71,7 +77,7 @@ extension LocationWeatherScreen: CLLocationManagerDelegate {
                 case .success(let weatherModel):
                     self.weatherModel = weatherModel
                     DispatchQueue.main.async {
-                    self.updateWeatherInfo(info: weatherModel)
+                        self.updateWeatherInfo(info: weatherModel)
                     }
                     print(weatherModel)
                 case .failure(let error):

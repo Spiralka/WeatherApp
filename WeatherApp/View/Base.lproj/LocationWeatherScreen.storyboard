@@ -37,14 +37,27 @@
                                     <constraint firstAttribute="height" constant="120" id="zxx-7u-Smd"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hdk-70-y86">
+                                <rect key="frame" x="311" y="745" width="48" height="33"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="33" id="fZ1-4f-KSl"/>
+                                    <constraint firstAttribute="width" constant="48" id="yRO-DB-6GE"/>
+                                </constraints>
+                                <state key="normal" image="arrow"/>
+                                <connections>
+                                    <action selector="nextScreenTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uIM-NN-h4l"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="6Xu-P2-K2i" firstAttribute="top" secondItem="d5f-Nx-WOL" secondAttribute="bottom" constant="6" id="Aju-Uo-NQT"/>
                             <constraint firstItem="6Xu-P2-K2i" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="BxB-Ah-kq4"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="XS3-al-yvV" secondAttribute="trailing" symbolic="YES" id="NAy-ls-cXF"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hdk-70-y86" secondAttribute="trailing" constant="16" id="Sth-mg-deP"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="d5f-Nx-WOL" secondAttribute="trailing" constant="60" id="Wll-XO-2n3"/>
                             <constraint firstItem="XS3-al-yvV" firstAttribute="leading" secondItem="6Xu-P2-K2i" secondAttribute="leading" id="a8y-jd-YVa"/>
+                            <constraint firstItem="hdk-70-y86" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="h9e-3c-e93"/>
                             <constraint firstItem="6Xu-P2-K2i" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="olz-5F-xwF"/>
                             <constraint firstItem="XS3-al-yvV" firstAttribute="top" secondItem="6Xu-P2-K2i" secondAttribute="bottom" id="ymr-xU-xw5"/>
                         </constraints>
@@ -54,11 +67,23 @@
                         <outlet property="cityLabel" destination="XS3-al-yvV" id="57A-b2-Wbk"/>
                         <outlet property="conditionIcon" destination="d5f-Nx-WOL" id="U2I-5P-aPz"/>
                         <outlet property="tempLabel" destination="6Xu-P2-K2i" id="EGr-2w-SBM"/>
+                        <segue destination="I8W-G6-0VR" kind="show" identifier="goToWeatherByCity" id="Knk-EN-0Ty"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="101.59999999999999" y="120.44334975369459"/>
         </scene>
+        <!--WeatherByCity-->
+        <scene sceneID="dBW-Up-lpW">
+            <objects>
+                <viewControllerPlaceholder storyboardName="WeatherByCity" id="I8W-G6-0VR" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1Zs-ob-ou4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="705" y="143"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="arrow" width="128" height="89"/>
+    </resources>
 </document>
