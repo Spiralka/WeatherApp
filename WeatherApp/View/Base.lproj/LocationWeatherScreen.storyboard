@@ -49,7 +49,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Something went wrong..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4xa-Xj-aef">
-                                <rect key="frame" x="107.66666666666669" y="484" width="226" height="27"/>
+                                <rect key="frame" x="107.66666666666666" y="484" width="267.33333333333337" height="27"/>
                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="22"/>
                                 <color key="textColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -64,6 +64,7 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hdk-70-y86" secondAttribute="trailing" constant="16" id="Sth-mg-deP"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="d5f-Nx-WOL" secondAttribute="trailing" constant="60" id="Wll-XO-2n3"/>
                             <constraint firstItem="XS3-al-yvV" firstAttribute="leading" secondItem="6Xu-P2-K2i" secondAttribute="leading" id="a8y-jd-YVa"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4xa-Xj-aef" secondAttribute="trailing" id="euT-tb-lfN"/>
                             <constraint firstItem="hdk-70-y86" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="h9e-3c-e93"/>
                             <constraint firstItem="4xa-Xj-aef" firstAttribute="leading" secondItem="XS3-al-yvV" secondAttribute="leading" id="j9Z-Nl-jiG"/>
                             <constraint firstItem="6Xu-P2-K2i" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="olz-5F-xwF"/>

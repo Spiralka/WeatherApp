@@ -49,7 +49,6 @@ class LocationWeatherScreen: UIViewController, CanReceive {
                 DispatchQueue.main.async {
                     self.animationsManager.fadeInAndOutAnimation(view: self.wrongLabel)
                     
-//                    self.wrongLabel.isHidden = false
                 }
                 print("Error \(error.localizedDescription)")
             }

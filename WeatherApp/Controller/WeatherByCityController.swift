@@ -24,6 +24,10 @@ class WeatherByCityController: UIViewController {
     func setupViews() {
         updateWeatherButton.setCornerRadius(radius: 5)
         cityTextField.setCornerRadius(radius: 5)
+        cityTextField.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 8, height: 0))
+        cityTextField.leftViewMode = .always
+
+        
     }
     
     @IBAction func closeButtonTapped(_ sender: UIButton) {
