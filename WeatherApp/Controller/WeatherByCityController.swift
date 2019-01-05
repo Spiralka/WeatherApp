@@ -13,12 +13,19 @@ class WeatherByCityController: UIViewController {
     
     var delegate: CanReceive?
     
+    @IBOutlet weak var updateWeatherButton: UIButton!
     @IBOutlet weak var cityTextField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        setupViews()
     }
+    
+    func setupViews() {
+        updateWeatherButton.setCornerRadius(radius: 5)
+        cityTextField.setCornerRadius(radius: 5)
+    }
+    
     @IBAction func closeButtonTapped(_ sender: UIButton) {
         dismiss(animated: true, completion: nil)
     }

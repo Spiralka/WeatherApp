@@ -68,6 +68,7 @@
                     </view>
                     <connections>
                         <outlet property="cityTextField" destination="IeZ-He-QfI" id="K5O-Ij-rs7"/>
+                        <outlet property="updateWeatherButton" destination="mms-bY-7d3" id="Xch-lu-RTf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0jL-2d-rBR" userLabel="First Responder" sceneMemberID="firstResponder"/>

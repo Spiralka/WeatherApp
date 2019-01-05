@@ -18,6 +18,7 @@
 		CFC4DD5C21DFD53D00B011B6 /* WeatherByCityController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC4DD5B21DFD53D00B011B6 /* WeatherByCityController.swift */; };
 		CFC4DD6021DFDE6300B011B6 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC4DD5F21DFDE6300B011B6 /* Protocols.swift */; };
 		CFC4DD6221DFE6FB00B011B6 /* Animator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC4DD6121DFE6FB00B011B6 /* Animator.swift */; };
+		CFC4DD6621E128AD00B011B6 /* UIView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC4DD6521E128AD00B011B6 /* UIView+Ext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		CFC4DD5B21DFD53D00B011B6 /* WeatherByCityController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherByCityController.swift; sourceTree = "<group>"; };
 		CFC4DD5F21DFDE6300B011B6 /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
 		CFC4DD6121DFE6FB00B011B6 /* Animator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animator.swift; sourceTree = "<group>"; };
+		CFC4DD6521E128AD00B011B6 /* UIView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,12 +68,11 @@
 		CF49C48521C152C4007E6B7B /* WeatherApp */ = {
 			isa = PBXGroup;
 			children = (
-				CF49C48621C152C4007E6B7B /* AppDelegate.swift */,
+				CFC4DD6721E12A1800B011B6 /* Application */,
 				CF99000621C1597300216C50 /* Model */,
 				CF99000721C15A4D00216C50 /* View */,
 				CF5364CE21C1600700C5833D /* Controller */,
-				CF49C48D21C152C8007E6B7B /* Assets.xcassets */,
-				CFC4DD6421DFE95500B011B6 /* Network */,
+				CFC4DD6421DFE95500B011B6 /* NetworkService */,
 				CFC4DD6321DFE94900B011B6 /* SupportingFiles */,
 			);
 			path = WeatherApp;
@@ -97,7 +98,6 @@
 		CF99000721C15A4D00216C50 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				CF49C48F21C152C8007E6B7B /* LaunchScreen.storyboard */,
 				CF49C48A21C152C4007E6B7B /* LocationWeatherScreen.storyboard */,
 				CFC4DD5921DFD52B00B011B6 /* WeatherByCity.storyboard */,
 			);
@@ -107,19 +107,46 @@
 		CFC4DD6321DFE94900B011B6 /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
+				CF49C48D21C152C8007E6B7B /* Assets.xcassets */,
 				CFC4DD5F21DFDE6300B011B6 /* Protocols.swift */,
 				CFC4DD6121DFE6FB00B011B6 /* Animator.swift */,
 				CF49C49221C152C8007E6B7B /* Info.plist */,
+				CFC4DD6521E128AD00B011B6 /* UIView+Ext.swift */,
 			);
 			path = SupportingFiles;
 			sourceTree = "<group>";
 		};
-		CFC4DD6421DFE95500B011B6 /* Network */ = {
+		CFC4DD6421DFE95500B011B6 /* NetworkService */ = {
 			isa = PBXGroup;
 			children = (
 				CF5364CF21C1607800C5833D /* NetworkManager.swift */,
 			);
-			path = Network;
+			path = NetworkService;
+			sourceTree = "<group>";
+		};
+		CFC4DD6721E12A1800B011B6 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				CFC4DD6921E12A8A00B011B6 /* View */,
+				CFC4DD6821E12A7B00B011B6 /* Controller */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		CFC4DD6821E12A7B00B011B6 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CF49C48F21C152C8007E6B7B /* LaunchScreen.storyboard */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		CFC4DD6921E12A8A00B011B6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CF49C48621C152C4007E6B7B /* AppDelegate.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -194,6 +221,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CFC4DD6621E128AD00B011B6 /* UIView+Ext.swift in Sources */,
 				CFC4DD5C21DFD53D00B011B6 /* WeatherByCityController.swift in Sources */,
 				CF5364D021C1607800C5833D /* NetworkManager.swift in Sources */,
 				CF49C48921C152C4007E6B7B /* LocationWeatherScreen.swift in Sources */,
