@@ -12,13 +12,12 @@ import UIKit
 class SimpleAnimator {
     
     func fadeInAndOutAnimation(view: UILabel) {
+        
         UIView.animate(withDuration: 2) {
             view.layer.opacity = 1
         }
-        
         UIView.animate(withDuration: 3.5) {
             view.layer.opacity = 0
         }
-        
     }
 }
