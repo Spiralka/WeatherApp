@@ -38,4 +38,11 @@ class WeatherByCityController: UIViewController {
         delegate?.receivedCityName(city: cityTextField.text ?? "")
         dismiss(animated: true, completion: nil)
     }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        get {
+            return .lightContent
+        }
+    }
+    
 }

@@ -38,7 +38,7 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hdk-70-y86">
-                                <rect key="frame" x="311" y="745" width="48" height="33"/>
+                                <rect key="frame" x="311" y="737" width="48" height="33"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="33" id="fZ1-4f-KSl"/>
                                     <constraint firstAttribute="width" constant="48" id="yRO-DB-6GE"/>
@@ -65,7 +65,7 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="d5f-Nx-WOL" secondAttribute="trailing" constant="60" id="Wll-XO-2n3"/>
                             <constraint firstItem="XS3-al-yvV" firstAttribute="leading" secondItem="6Xu-P2-K2i" secondAttribute="leading" id="a8y-jd-YVa"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4xa-Xj-aef" secondAttribute="trailing" id="euT-tb-lfN"/>
-                            <constraint firstItem="hdk-70-y86" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="h9e-3c-e93"/>
+                            <constraint firstItem="hdk-70-y86" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="-8" id="h9e-3c-e93"/>
                             <constraint firstItem="4xa-Xj-aef" firstAttribute="leading" secondItem="XS3-al-yvV" secondAttribute="leading" id="j9Z-Nl-jiG"/>
                             <constraint firstItem="6Xu-P2-K2i" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="olz-5F-xwF"/>
                             <constraint firstItem="XS3-al-yvV" firstAttribute="top" secondItem="6Xu-P2-K2i" secondAttribute="bottom" id="ymr-xU-xw5"/>

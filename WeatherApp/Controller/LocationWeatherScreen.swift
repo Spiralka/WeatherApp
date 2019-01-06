@@ -85,7 +85,11 @@ class LocationWeatherScreen: UIViewController, CanReceive {
         
     }
     
-    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        get {
+            return .lightContent
+        }
+    }
     
     
 }
@@ -103,9 +107,8 @@ extension LocationWeatherScreen: CLLocationManagerDelegate {
             print("long = \(location.coordinate.longitude)", "lat = \(location.coordinate.latitude)")
             let latitude = location.coordinate.latitude.description
             let longitude = location.coordinate.longitude.description
-            let params = [latitude, longitude]
             
-            networkManager.getWeatherData(parametrs: params) { (result) in
+            networkManager.getWeatherData(lat: latitude, lon: longitude) { (result) in
                 switch result {
                 case .success(let weatherModel):
                     self.weatherModel = weatherModel
