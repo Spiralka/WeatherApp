@@ -28,10 +28,7 @@ class NetworkManager {
         loadItems(with: urlComponents, completion: completion)
     }
     
-    
-    
-    
-    
+
     enum Result<Value> {
         case success(Value)
         case failure(Error)
